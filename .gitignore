@@ -64,3 +64,4 @@ stamp-*
 CMakeLists.txt
 Makefile
 Makefile.in
+*.log
