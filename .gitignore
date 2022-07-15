@@ -59,3 +59,8 @@ stamp-*
 /mpc*
 /gmp*
 /isl*
+
+/build
+CMakeLists.txt
+Makefile
+Makefile.in

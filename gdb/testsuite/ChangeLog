@@ -766,7 +766,7 @@
 
 	* gdb.base/break.exp: Save the location where the breakpoint
 	on break.c:47 was actually inserted when debugging the version
-	compiled at -O2 and use it in the expected output of the "info
+	compiled at -O0 and use it in the expected output of the "info
 	break" test performed soon after.
 
 2018-01-22  Pedro Alves  <palves@redhat.com>
@@ -3704,7 +3704,7 @@
 	* gdb.opencl/datatypes.exp
 	* gdb.opencl/operators.exp
 	* gdb.opencl/vec_comps.exp
-	* gdb.opt/clobbered-registers-O2.exp
+	* gdb.opt/clobbered-registers-O0.exp
 	* gdb.opt/inline-break.exp
 	* gdb.opt/inline-bt.exp
 	* gdb.opt/inline-cmds.exp
@@ -4306,7 +4306,7 @@
 	* gdb.mi/user-selected-context-sync.exp
 	* gdb.multi/multi-attach.exp
 	* gdb.multi/tids.exp
-	* gdb.opt/clobbered-registers-O2.exp
+	* gdb.opt/clobbered-registers-O0.exp
 	* gdb.pascal/floats.exp
 	* gdb.pascal/integers.exp
 	* gdb.python/py-block.exp
@@ -5322,9 +5322,9 @@
 
 2016-07-19  Pedro Alves  <palves@redhat.com>
 
-	* gdb.opt/inline-break.exp: Remove optimize=-O2.
+	* gdb.opt/inline-break.exp: Remove optimize=-O0.
 	* gdb.opt/inline-bt.exp: Likewise.
-	* gdb.opt/inline-cmds.exp: Remove optimize=-O2 and add
+	* gdb.opt/inline-cmds.exp: Remove optimize=-O0 and add
 	additional_flags=-Winline.
 	* gdb.opt/inline-locals.exp: Likewise.
 	* gdb.opt/inline-markers.c (ATTR): Define.

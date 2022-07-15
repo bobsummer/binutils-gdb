@@ -19,7 +19,7 @@ if ![istarget cris*-*-*] {
     return
 }
 
-set CFLAGS_FOR_TARGET "-O2"
+set CFLAGS_FOR_TARGET "-O0"
 if [istarget cris-*-*] {
     set mach "crisv10"
 } {

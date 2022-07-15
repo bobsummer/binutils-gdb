@@ -3519,13 +3519,13 @@ if test "$ac_test_CFLAGS" = set; then
   CFLAGS=$ac_save_CFLAGS
 elif test $ac_cv_prog_cc_g = yes; then
   if test "$GCC" = yes; then
-    CFLAGS="-g -O2"
+    CFLAGS="-g -O0"
   else
     CFLAGS="-g"
   fi
 else
   if test "$GCC" = yes; then
-    CFLAGS="-O2"
+    CFLAGS="-O0"
   else
     CFLAGS=
   fi
@@ -3866,13 +3866,13 @@ if test "$ac_test_CXXFLAGS" = set; then
   CXXFLAGS=$ac_save_CXXFLAGS
 elif test $ac_cv_prog_cxx_g = yes; then
   if test "$GXX" = yes; then
-    CXXFLAGS="-g -O2"
+    CXXFLAGS="-g -O0"
   else
     CXXFLAGS="-g"
   fi
 else
   if test "$GXX" = yes; then
-    CXXFLAGS="-O2"
+    CXXFLAGS="-O0"
   else
     CXXFLAGS=
   fi
@@ -10780,7 +10780,7 @@ $as_echo "#define HAVE_PYTHON 1" >>confdefs.h
   # We cannot call python-config directly because it will output whatever was
   # used when compiling the Python interpreter itself, including flags which
   # would make the python-related objects be compiled differently from the
-  # rest of GDB (e.g., -O2 and -fPIC).
+  # rest of GDB (e.g., -O0 and -fPIC).
   if test "${GCC}" = yes; then
     tentative_python_cflags="-fno-strict-aliasing -DNDEBUG -fwrapv"
   fi

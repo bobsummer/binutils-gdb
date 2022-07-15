@@ -5587,8 +5587,9 @@ assign_file_positions_for_load_sections (bfd *abfd,
 		    (_("%pB: section %pA lma %#" PRIx64 " adjusted to %#" PRIx64),
 		     abfd, sec, (uint64_t) s_start, (uint64_t) p_end);
 		  adjust = 0;
-		  sec->lma = p_end;
+		  sec->lma = p_end;		  
 		}
+		  this_hdr->sh_addr = p_end;
 	      p->p_memsz += adjust;
 
 	      if (this_hdr->sh_type != SHT_NOBITS)
@@ -5613,7 +5614,7 @@ assign_file_positions_for_load_sections (bfd *abfd,
 		 everything.  */
 	      if (i == 0)
 		{
-		  this_hdr->sh_offset = sec->filepos = off;
+		  this_hdr->sh_offset = sec->filepos = off;		  
 		  off += this_hdr->sh_size;
 		  p->p_filesz = this_hdr->sh_size;
 		  p->p_memsz = 0;
